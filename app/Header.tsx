@@ -66,13 +66,15 @@ const [isEditing, setIsEditing] = useState(false);
     // }
     // console.log("multipleOfFive", multipleOfFive(25))
 
+    // for overflow // truncate
+
     return (
-        <main className="main">
-            <div className="h1">
-                <h1>Task Manager</h1>
+        <main className="container mx-auto ">
+            <div className="h1 bg-sky-700 rounded-2xl w-full mx-3 ">
+                <h1 className=" text-2xl font-bold sm:text-center text-white md:text-center">Task Manager</h1>
             </div>
             <div >
-                <input type="text" placeholder="Add Your Task Here..." className="input" value={task}
+                <input type="text" placeholder="Add Your Task Here..." className="input p-2  bg-blue-200 hover:bg-blue-950" value={task}
                     onChange={(event) => {
                         // console.log("++", e.target)
                         // console.log("--", e.target.value)
@@ -80,15 +82,17 @@ const [isEditing, setIsEditing] = useState(false);
                     }}
                 />
 
-                <button type="submit" className="button" onClick={clickedVal}> Save </button>
+                <button type="submit" className="bg-sky-500 hover:bg-sky-700 ... p-2 rounded-2xl mx-2 my-1 " onClick={clickedVal}> Save </button>
             </div>
+            
+            <div className="bg-sky-900 rounded-2xl align-middle m-2 w-96 font-medium ...">
+            <ul className="p-6 divide-y divide-slate-800 ">
 
-            <ul>
                 {items.map((value, index) => {
                     return <>
-                        <li className="li" key={index} id={String(index)}> • {value}
+                        <li className="li container mx-auto px-4 p-0.5 m-0.5 text-ellipsis overflow-hidden ..." key={index} id={String(index)}> • {value}
 
-                            <button className="editbtn" onClick={() => editFunc(index)}>✏️</button>
+                            <button className="editbtn " onClick={() => editFunc(index)}>✏️</button>
 
                             <button className="deletebtn" onClick={() => deleteFunc(index)}>⛔</button>
 
@@ -96,6 +100,7 @@ const [isEditing, setIsEditing] = useState(false);
                     </>
                 })}
             </ul>
+        </div>
 
         </main>
     )
