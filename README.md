@@ -30,5 +30,5 @@ The backend stores tasks in memory (no database used).
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/task-manager.git
+git clone https://github.com/debojyotisb/Task-Manager--NextJS-TS.git
 cd task-manager
