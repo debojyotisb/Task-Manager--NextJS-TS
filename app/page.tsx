@@ -1,13 +1,11 @@
-import React from "react";
-import Header from './Header';
-// import tasklist from "./TaskList";
+import TaskApp from "./components/TaskApp";
 
-
-export default function Home() {
+export default function Page() {
   return (
-    <div>
-      <Header/>
-      {/* <tasklist /> */}
-    </div>
-  )
+    <main className="container mx-auto p-4 sm:p-6">
+      <div className="mx-auto w-full max-w-xl">
+        <TaskApp />
+      </div>
+    </main>
+  );
 }
