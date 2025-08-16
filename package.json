@@ -6,15 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "clean": "rimraf .next",
-    "start": "next start",
+    "start": "node server.js",
     "lint": "next lint",
-    "server": "node server/server.js"
+    "server": "node app/server/server.js"
   },
   "dependencies": {
     "@types/node": "20.4.2",
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "next": "13.4.10",
     "postcss": "8.4.26",
     "react": "18.2.0",

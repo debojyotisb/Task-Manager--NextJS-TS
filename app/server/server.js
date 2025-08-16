@@ -1,11 +1,11 @@
 // server/server.js
-// const express = require("express");
-// const cors = require("cors");
-// const bodyParser = require("body-parser");
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
 
-import express from "express";
-import cors from "cors";
-import bodyParser from "body-parser";
+// import express from "express";
+// import cors from "cors";
+// import bodyParser from "body-parser";
 
 const app = express();
 const PORT = 5000;
